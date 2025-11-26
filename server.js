@@ -3,6 +3,9 @@ import publicRoutes from './routes/public.js';
 import privateRoutes from './routes/private.js';
 import auth from './middlewares/auth.js';
 import connectDB from './database.js'; // Importa a conexão
+// import dotenv from 'dotenv';
+// dotenv.config();
+// heroku não precisa, mas local precisa
 
 
 const app = express();
@@ -24,3 +27,4 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
